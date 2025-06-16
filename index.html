@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Multi-Step Form</title>
+        <link href="./styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <form id="multistep-form">
+            <div>
+                <h1 id="form-header"></h1>
+            </div>
+
+            <section class="tab" id="personal-info">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="e.g. Stephen King">
+
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="e.g. stephenking@lorem.com">
+
+                <label for="phone">Phone Number</label>
+                <input id="phone" type="text" placeholder="e.g. +1 234 567 890">
+            </section>
+
+            <section class="tab" id="plan">
+                <input id="arcade-btn" type="radio" value="arcade-btn" name="arcade-btn">
+                <label for="arcade-btn">
+                    <h2>Arcade</h2>
+                    <p>$9/mo</p>
+                </label>
+
+                <input id="advanced-btn" type="radio" value="advanced-btn" name="advanced-btn">
+                <label for="advanced-btn">
+                    <h2>Advanced</h2>
+                    <p>$12/mo</p>
+                </label>
+
+                <input id="pro-btn" type="radio" value="pro-btn" name="pro-btn">
+                <label for="pro-btn">
+                    <h2>Pro</h2>
+                    <p>$15/mo</p>
+                </label>
+
+
+            </section>
+
+            <section class="tab" id="add-ons">
+
+            </section>
+
+            <section class="tab" id="summary">
+
+            </section>
+
+
+        </form>
+        <script src="script.js"></script>
+    </body>
+</html>
