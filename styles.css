@@ -1,10 +1,62 @@
+#multistep-form {
+    border: 2px solid blue;
+    border-radius: 20px;
+    padding: 3% 6% 7%;
+    margin-top: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#tab-header {
+    font-size: 25px;
+}
+
+#tab-description {
+    font-size: 18px;
+    color: rgb(145, 144, 144);
+    margin-top: -7px;
+    line-height: 1.5;
+}
+
+
+
 #plan input[type="radio"] {
     display: none;
 }
 
-#plan label {
+#plan label, #add-ons label {
     display: block;
     border: 1px solid black;
+    padding: 10px;
     cursor: pointer;
-    width: 7%;
+    margin-top: 12px;
+    border-radius: 10px;
+}
+
+
+#add-ons input {
+    float: left;
+    margin-top: 17px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.addon-title {
+    display: inline;
+    font-size: 20px;
+}
+
+.addon-price {
+    float: right;
+    align-items: center;
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.addon-description {
+    margin-top: 2px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    font-size: 15px;
+    color: rgb(145, 144, 144);
 }

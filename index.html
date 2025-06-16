@@ -8,8 +8,14 @@
     </head>
     <body>
         <form id="multistep-form">
-            <div>
-                <h1 id="form-header"></h1>
+            <button id="step-one">1</button>
+            <button id="step-two">2</button>
+            <button id="step-three">3</button>
+            <button id="step-four">4</button>
+
+            <div id="tab-descriptor">
+                <h1 id="tab-header">Pick add-ons</h1>
+                <p id="tab-description">Add-ons help enhance your gaming experience</p>
             </div>
 
             <section class="tab" id="personal-info">
@@ -24,36 +30,64 @@
             </section>
 
             <section class="tab" id="plan">
-                <input id="arcade-btn" type="radio" value="arcade-btn" name="arcade-btn">
+                <input id="arcade-btn" type="radio" value="arcade-btn" name="plan-btn">
                 <label for="arcade-btn">
-                    <h2>Arcade</h2>
-                    <p>$9/mo</p>
+                    <h2 class="plan-header">Arcade</h2>
+                    <p class="plan-price">$9/mo</p>
                 </label>
 
-                <input id="advanced-btn" type="radio" value="advanced-btn" name="advanced-btn">
+                <input id="advanced-btn" type="radio" value="advanced-btn" name="plan-btn">
                 <label for="advanced-btn">
-                    <h2>Advanced</h2>
-                    <p>$12/mo</p>
+                    <h2 class="plan-header">Advanced</h2>
+                    <p class="plan-price">$12/mo</p>
                 </label>
 
-                <input id="pro-btn" type="radio" value="pro-btn" name="pro-btn">
+                <input id="pro-btn" type="radio" value="pro-btn" name="plan-btn">
                 <label for="pro-btn">
-                    <h2>Pro</h2>
-                    <p>$15/mo</p>
+                    <h2 class="plan-header">Pro</h2>
+                    <p class="plan-price">$15/mo</p>
                 </label>
-
-
             </section>
 
             <section class="tab" id="add-ons">
+                <label>
+                    <input id="online-addon" type="checkbox" name="addon-btn" value="addon-btn">
+                    <h2 class="addon-title">Online service</h2>
+                    <p class="addon-price">+$1/mo</p>
+                    <p class="addon-description">Access to multiplayer games</p>
+                </label>
 
+                <label>
+                    <input id="storage-addon" type="checkbox" name="addon-btn" value="addon-btn">
+                    <h2 class="addon-title">Larger storage</h2>
+                    <p class="addon-price">+$2/mo</p>
+                    <p class="addon-description">Extra 1TB of cloud save</p>
+                </label>
+
+                <label>
+                    <input id="profile-addon" type="checkbox" name="addon-btn" value="addon-btn">
+                    <h2 class="addon-title">Customizable profile</h2>
+                    <p class="addon-price">+$2/mo</p>
+                    <p class="addon-description">Custom theme on your profile</p>
+                </label>
             </section>
 
             <section class="tab" id="summary">
-
+                <h2 class="plan-choice"></h2>
+                <p class="plan-choice-price"></p>
+                <a href="" id="change">Change</a>
+                <div id="chosen-add-ons"></div>
+                <p id="total"></p>
+                <p id="total-price"></p>
             </section>
 
 
+
+
+
+            <button id="go-back-btn">Go Back</button>
+            <button id="next-step-btn">Next Step</button>
+            <button id="confirm">Confirm</button>
         </form>
         <script src="script.js"></script>
     </body>
