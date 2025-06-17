@@ -11,6 +11,10 @@
     src: url(assets/fonts/Ubuntu-Regular.ttf);
 }
 
+#plan, #personal-info, #add-ons, #summary, #confirm {
+    display: none;
+}
+
 body {
     background-image: url(assets/images/bg-sidebar-mobile.svg);
     background-repeat: no-repeat;
@@ -149,9 +153,42 @@ input[type="text"], input[type="email"] {
     color: rgb(145, 144, 144);
 }
 
-#plan, #add-ons, #personal-info, #summary {
-    display: none;
+
+
+
+
+.footer {
+    position: fixed;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
 }
+
+#go-back-btn {
+    font-family: "Medium";
+    background-color: white;
+    color: gray;
+    border: none;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 29px;
+    left: 10px;
+}
+
+#next-step-btn {
+    background-color: darkblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 90px;
+    position: fixed;
+    bottom: 17px;
+    right: 10px;
+}
+
 
 .highlight {
     background-color: lightblue;
