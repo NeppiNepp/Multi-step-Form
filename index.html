@@ -6,89 +6,112 @@
         <title>Multi-Step Form</title>
         <link href="./styles.css" rel="stylesheet">
     </head>
-    <body>
-        <form id="multistep-form">
-            <button id="step-one">1</button>
-            <button id="step-two">2</button>
-            <button id="step-three">3</button>
-            <button id="step-four">4</button>
 
-            <div id="tab-descriptor">
-                <h1 id="tab-header">Pick add-ons</h1>
-                <p id="tab-description">Add-ons help enhance your gaming experience</p>
+    <body>
+        <main class="form-wrapper">
+            <div class="button-wrapper">
+                <div>
+                    <button class="step-number">1</button>
+                    <button class="step-number">2</button>
+                    <button class="step-number">3</button>
+                    <button class="step-number">4</button>
+                </div>
             </div>
 
-            <section class="tab" id="personal-info">
-                <label for="name">Name</label>
-                <input id="name" type="text" placeholder="e.g. Stephen King">
+            <form id="multistep-form">
+                <section class="tab" id="personal-info">
+                    <h1 class="tab-header">Personal info</h1>
+                    <span class="tab-description">Please provide your name, email address, and phone number.</span>
+                    <label for="name">Name</label>
+                    <input id="name" type="text" placeholder="e.g. Stephen King">
 
-                <label for="email">Email</label>
-                <input id="email" type="email" placeholder="e.g. stephenking@lorem.com">
+                    <label for="email">Email Address</label>
+                    <input id="email" type="email" placeholder="e.g. stephenking@lorem.com">
 
-                <label for="phone">Phone Number</label>
-                <input id="phone" type="text" placeholder="e.g. +1 234 567 890">
-            </section>
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" type="text" placeholder="e.g. +1 234 567 890">
+                </section>
 
-            <section class="tab" id="plan">
-                <input id="arcade-btn" type="radio" value="arcade-btn" name="plan-btn">
-                <label for="arcade-btn">
-                    <h2 class="plan-header">Arcade</h2>
-                    <p class="plan-price">$9/mo</p>
-                </label>
+                <section class="tab" id="plan">
+                    <h1 class="tab-header">Select your plan</h1>
+                    <span class="tab-description">You have the option of monthly or yearly billing.</span>
+                    <input id="arcade-btn" type="radio" value="arcade-btn" name="plan-btn">
+                    <label for="arcade-btn">
+                        <h2 class="plan-header">Arcade</h2>
+                        <p class="plan-price">$9/mo</p>
+                        <img src="assets/images/icon-arcade.svg" class="plan-images">
+                    </label>
 
-                <input id="advanced-btn" type="radio" value="advanced-btn" name="plan-btn">
-                <label for="advanced-btn">
-                    <h2 class="plan-header">Advanced</h2>
-                    <p class="plan-price">$12/mo</p>
-                </label>
+                    <input id="advanced-btn" type="radio" value="advanced-btn" name="plan-btn">
+                    <label for="advanced-btn">
+                        <h2 class="plan-header">Advanced</h2>
+                        <p class="plan-price">$12/mo</p>
+                        <img src="assets/images/icon-advanced.svg" class="plan-images">
+                    </label>
 
-                <input id="pro-btn" type="radio" value="pro-btn" name="plan-btn">
-                <label for="pro-btn">
-                    <h2 class="plan-header">Pro</h2>
-                    <p class="plan-price">$15/mo</p>
-                </label>
-            </section>
+                    <input id="pro-btn" type="radio" value="pro-btn" name="plan-btn">
+                    <label for="pro-btn">
+                        <h2 class="plan-header">Pro</h2>
+                        <p class="plan-price">$15/mo</p>
+                        <img src="assets/images/icon-pro.svg" class="plan-images">
+                    </label>
+                </section>
 
-            <section class="tab" id="add-ons">
-                <label>
-                    <input id="online-addon" type="checkbox" name="addon-btn" value="addon-btn">
-                    <h2 class="addon-title">Online service</h2>
-                    <p class="addon-price">+$1/mo</p>
-                    <p class="addon-description">Access to multiplayer games</p>
-                </label>
+                <section class="tab" id="add-ons">
+                    <h1 class="tab-header">Pick add-ons</h1>
+                    <span class="tab-description">Add-ons help enhance your gaming experience</span>
+                    <label>
+                        <input id="online-addon" type="checkbox" name="addon-btn" value="addon-btn">
+                        <h2 class="addon-title">Online service</h2>
+                        <p class="addon-price">+$1/mo</p>
+                        <p class="addon-description">Access to multiplayer games</p>
+                    </label>
 
-                <label>
-                    <input id="storage-addon" type="checkbox" name="addon-btn" value="addon-btn">
-                    <h2 class="addon-title">Larger storage</h2>
-                    <p class="addon-price">+$2/mo</p>
-                    <p class="addon-description">Extra 1TB of cloud save</p>
-                </label>
+                    <label>
+                        <input id="storage-addon" type="checkbox" name="addon-btn" value="addon-btn">
+                        <h2 class="addon-title">Larger storage</h2>
+                        <p class="addon-price">+$2/mo</p>
+                        <p class="addon-description">Extra 1TB of cloud save</p>
+                    </label>
 
-                <label>
-                    <input id="profile-addon" type="checkbox" name="addon-btn" value="addon-btn">
-                    <h2 class="addon-title">Customizable profile</h2>
-                    <p class="addon-price">+$2/mo</p>
-                    <p class="addon-description">Custom theme on your profile</p>
-                </label>
-            </section>
+                    <label>
+                        <input id="profile-addon" type="checkbox" name="addon-btn" value="addon-btn">
+                        <h2 class="addon-title">Customizable profile</h2>
+                        <p class="addon-price">+$2/mo</p>
+                        <p class="addon-description">Custom theme on your profile</p>
+                    </label>
+                </section>
 
-            <section class="tab" id="summary">
-                <h2 class="plan-choice"></h2>
-                <p class="plan-choice-price"></p>
-                <a href="" id="change">Change</a>
-                <div id="chosen-add-ons"></div>
-                <p id="total"></p>
-                <p id="total-price"></p>
-            </section>
+                <section class="tab" id="summary">
+                    <h1 class="tab-header">Finishing up</h1>
+                    <span class="tab-description">Double-check everything looks OK before confirming.</span>
 
+                    <p class="plan-choice">Arcade (Monthly)</p>
+                    <p class="plan-choice-price">$9/mo</p>
+                    <a href="" id="change">Change</a>
+                    <div id="chosen-add-ons">
+                        <p>Online service<span>+$1/mo</span></p>
+                        <p>Larger storage<span>+$2/mo</span></p>
+                    </div>
+                    <p id="total">Total (per month)</p>
+                    <p id="total-price">+$12/mo</p>
+                </section>
 
-
-
-
-            <button id="go-back-btn">Go Back</button>
-            <button id="next-step-btn">Next Step</button>
-            <button id="confirm">Confirm</button>
-        </form>
-        <script src="script.js"></script>
+                <section class="tab" id="thank-you">
+                    <img src="assets/images/icon-thank-you.svg">
+                    <h1 class="tab-header">Thank You!</h1>
+                    <span class="tab-description">
+                        Thanks for confirming your subscription!
+                        We hope you have fun using our platform.
+                        if you ever need support, please feel free to email us at
+                        support@loremgaming.com.
+                    </span>
+                </section>
+            </form>
+        </main>
+        <button id="go-back-btn">Go Back</button>
+        <button id="next-step-btn">Next Step</button>
+        <button id="confirm">Confirm</button>
+            <script src="script.js"></script>
     </body>
 </html>
