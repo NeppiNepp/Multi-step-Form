@@ -41,6 +41,10 @@ body {
     height: 35px;
 }
 
+.button-wrapper p {
+    display: none;
+}
+
 #multistep-form {
     background-color: #ffffff;
     border-radius: 20px;
@@ -223,7 +227,7 @@ input[type="text"], input[type="email"] {
     width: 100%;
 }
 
-#go-back-btn {
+.go-back-btn {
     font-family: "Medium";
     background-color: white;
     color: gray;
@@ -234,7 +238,7 @@ input[type="text"], input[type="email"] {
     left: 10px;
 }
 
-#next-step-btn, #confirm {
+.next-step-btn, .confirm {
     background-color: darkblue;
     color: white;
     border: none;
@@ -262,6 +266,97 @@ input[type="text"], input[type="email"] {
 }
 
 
-@media (width >= 1000px) {
-    /* set up styles for screen size of 1440px */
+@media (width >= 1050px) {
+    /* move buttons for desktop design and finish resizing elements */
+
+
+    body {
+        background-image: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button-wrapper {
+        background-image: url(assets/images/bg-sidebar-desktop.svg);
+        background-size: cover;
+        display: block;
+        border-radius: 10px;
+        margin: 20px;
+        padding: 20px 0 0 15px;
+        float: left;
+        width: 26%;
+        height: 34em;
+    }
+
+    .step-number {
+        text-align: center;
+        display: inline;
+        border-radius: 100%;
+        background-color: transparent;
+        margin-bottom: 20px;
+        margin-top: 30px;
+        color: white;
+        width: 35px;
+        height: 35px;
+    }
+
+    .button-wrapper p {
+        display: inline;
+        text-align: left;
+        margin-left: 10px;
+        font-family: "Regular";
+        color: rgb(185, 182, 182);
+    }
+
+    .button-wrapper span {
+        display: block;
+        margin-top:  -27px;
+        margin-left: 57px;
+        font-family: "Bolded";
+        color: white;
+    }
+
+    .form-wrapper {
+        margin-top: 80px;
+        background-color: white;
+        border-radius: 20px;
+        width: 70vw;
+    }
+
+    #personal-info input {
+        width: 30em;
+        margin-bottom: 20px;
+    }
+
+    #plan label, #add-ons label {
+        width: 30em;
+    }
+
+    #multistep-form {
+        background-color: transparent;
+        margin-top: 10px;
+        margin-left: 35%;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .go-back-btn {
+        font-family: "Medium";
+        background-color: white;
+        color: gray;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .next-step-btn, .confirm {
+        background-color: darkblue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        height: 40px;
+        width: 110px;
+    }
 }
