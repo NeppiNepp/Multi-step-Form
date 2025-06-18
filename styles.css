@@ -11,9 +11,7 @@
     src: url(assets/fonts/Ubuntu-Regular.ttf);
 }
 
-#plan, #personal-info, #add-ons, #summary, #confirm {
-    display: none;
-}
+
 
 body {
     background-image: url(assets/images/bg-sidebar-mobile.svg);
@@ -113,7 +111,7 @@ input[type="text"], input[type="email"] {
 
 #plan label, #add-ons label {
     display: block;
-    border: 1px solid black;
+    border: 1px solid rgb(214, 214, 214);
     cursor: pointer;
     margin-top: 15px;
     border-radius: 10px;
@@ -132,6 +130,7 @@ input[type="text"], input[type="email"] {
 }
 
 .addon-title {
+    color: rgb(12, 12, 102);
     display: inline;
     font-size: 15px;
     line-height: 1.2;
@@ -153,6 +152,64 @@ input[type="text"], input[type="email"] {
     color: rgb(145, 144, 144);
 }
 
+
+#change, #chosen-addons p, #total {
+    color: rgb(156, 156, 156);
+}
+
+.totalling-container {
+    font-family: "Regular";
+    margin-top: 15px;
+    padding: 5px 10px 5px 10px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 10px;
+}
+
+.plan-choice {
+    color: rgb(24, 25, 104);
+    font-family: "Bolded";
+    margin-bottom: 4px;
+}
+
+.plan-choice span {
+    margin-top: 13px;
+    float: right;
+}
+
+.divider {
+    margin-top: 10px;
+    border: 1px solid rgb(233, 233, 233);
+    display: block;
+}
+
+#chosen-addons span {
+    float: right;
+    margin-top: 2px;
+    font-size: 13px;
+    color: rgb(26, 27, 77);
+}
+
+#total {
+    float: left;
+    margin-top: 20px;
+}
+
+#total-price {
+    font-family: "Bolded";
+    float: right;
+    margin-top: 20px;
+    color: rgb(48, 14, 141);
+}
+
+#thank-you {
+    font-size: 15px;
+    margin: 50px 0;
+    text-align: center;
+}
+
+#thank-you img {
+    width: 50px;
+}
 
 
 
@@ -177,7 +234,7 @@ input[type="text"], input[type="email"] {
     left: 10px;
 }
 
-#next-step-btn {
+#next-step-btn, #confirm {
     background-color: darkblue;
     color: white;
     border: none;
@@ -190,7 +247,21 @@ input[type="text"], input[type="email"] {
 }
 
 
-.highlight {
+.hidden {
+    display: none !important;
+}
+
+.highlight-step {
     background-color: lightblue;
     color: black;
+}
+
+.highlight-chosen {
+    background-color: rgb(237, 232, 247);
+    border: 1px solid rgb(16, 4, 36) !important;
+}
+
+
+@media (width >= 1000px) {
+    /* set up styles for screen size of 1440px */
 }

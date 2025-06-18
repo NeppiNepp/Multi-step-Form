@@ -32,7 +32,7 @@
                     <input id="phone" type="text" placeholder="e.g. +1 234 567 890">
                 </section>
 
-                <section class="tab" id="plan">
+                <section class="tab hidden" id="plan">
                     <h1 class="tab-header">Select your plan</h1>
                     <span class="tab-description">You have the option of monthly or yearly billing.</span>
                     <input id="arcade-btn" type="radio" value="arcade-btn" name="plan-btn">
@@ -57,24 +57,24 @@
                     </label>
                 </section>
 
-                <section class="tab" id="add-ons">
+                <section class="tab hidden" id="add-ons">
                     <h1 class="tab-header">Pick add-ons</h1>
                     <span class="tab-description">Add-ons help enhance your gaming experience</span>
-                    <label>
+                    <label for="online-addon">
                         <input id="online-addon" type="checkbox" name="addon-btn" value="addon-btn">
                         <h2 class="addon-title">Online service</h2>
                         <p class="addon-price">+$1/mo</p>
                         <p class="addon-description">Access to multiplayer games</p>
                     </label>
 
-                    <label>
+                    <label for="storage-addon">
                         <input id="storage-addon" type="checkbox" name="addon-btn" value="addon-btn">
                         <h2 class="addon-title">Larger storage</h2>
                         <p class="addon-price">+$2/mo</p>
                         <p class="addon-description">Extra 1TB of cloud save</p>
                     </label>
 
-                    <label>
+                    <label for="profile-addon">
                         <input id="profile-addon" type="checkbox" name="addon-btn" value="addon-btn">
                         <h2 class="addon-title">Customizable profile</h2>
                         <p class="addon-price">+$2/mo</p>
@@ -82,23 +82,25 @@
                     </label>
                 </section>
 
-                <section class="tab" id="summary">
+                <section class="tab hidden" id="summary">
                     <h1 class="tab-header">Finishing up</h1>
                     <span class="tab-description">Double-check everything looks OK before confirming.</span>
 
-                    <p class="plan-choice">Arcade (Monthly)</p>
-                    <p class="plan-choice-price">$9/mo</p>
-                    <a href="" id="change">Change</a>
-                    <div id="chosen-add-ons">
-                        <p>Online service<span>+$1/mo</span></p>
-                        <p>Larger storage<span>+$2/mo</span></p>
+                    <div class="totalling-container">
+                        <p class="plan-choice">Arcade (Monthly)<span>$9/mo</span></p>
+                        <a href="" id="change">Change</a>
+                        <div class="divider"></div>
+                        <div id="chosen-addons">
+                            <p>Online service<span>+$1/mo</span></p>
+                            <p>Larger storage<span>+$2/mo</span></p>
+                        </div>
                     </div>
                     <p id="total">Total (per month)</p>
                     <p id="total-price">+$12/mo</p>
                 </section>
 
-                <section class="tab" id="thank-you">
-                    <img src="assets/images/icon-thank-you.svg">
+                <section class="tab hidden" id="thank-you">
+                        <img src="assets/images/icon-thank-you.svg">
                     <h1 class="tab-header">Thank You!</h1>
                     <span class="tab-description">
                         Thanks for confirming your subscription!
