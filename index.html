@@ -11,7 +11,7 @@
         <main class="form-wrapper">
             <div class="button-wrapper">
                 <div>
-                    <button class="step-number">1</button>
+                    <button class="step-number highlight-step">1</button>
                     <p>STEP 1<span>YOUR INFO</span></p>
                     <button class="step-number">2</button>
                     <p>STEP 2<span>SELECT PLAN</span></p>
@@ -27,13 +27,13 @@
                     <h1 class="tab-header">Personal info</h1>
                     <span class="tab-description">Please provide your name, email address, and phone number.</span>
                     <label for="name">Name</label>
-                    <input id="name" type="text" placeholder="e.g. Stephen King">
+                    <input id="name" type="text" placeholder="e.g. Stephen King" required>
 
                     <label for="email">Email Address</label>
-                    <input id="email" type="email" placeholder="e.g. stephenking@lorem.com">
+                    <input id="email" type="email" placeholder="e.g. stephenking@lorem.com" required>
 
                     <label for="phone">Phone Number</label>
-                    <input id="phone" type="text" placeholder="e.g. +1 234 567 890">
+                    <input id="phone" type="text" placeholder="e.g. +1 234 567 890" required>
                 </section>
 
                 <section class="tab hidden" id="plan">
@@ -113,17 +113,13 @@
                         support@loremgaming.com.
                     </span>
                 </section>
-
-                <button class="go-back-btn large-screen">Go Back</button>
-                <button class="next-step-btn large-screen">Next Step</button>
-                <button class="confirm large-screen">Confirm</button>
             </form>
+            <div class="footer">
+                <button class="go-back-btn hidden">Go Back</button>
+                <button class="next-step-btn">Next Step</button>
+                <button class="confirm hidden">Confirm</button>
+            </div>
         </main>
-        <div class="footer">
-            <button class="go-back-btn">Go Back</button>
-            <button class="next-step-btn">Next Step</button>
-            <button class="confirm">Confirm</button>
-        </div>
         <script src="script.js"></script>
     </body>
 </html>

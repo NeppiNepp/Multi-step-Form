@@ -48,8 +48,8 @@ body {
 #multistep-form {
     background-color: #ffffff;
     border-radius: 20px;
-    margin: 30px 1.5% 0px 1.5%;
-    padding: 3% 6% 7%;
+    margin-top: 20px;
+    padding: 6% 7% 9%;
     min-width: 300px;
     display: flex;
     justify-content: center;
@@ -256,8 +256,8 @@ input[type="text"], input[type="email"] {
 }
 
 .highlight-step {
-    background-color: lightblue;
-    color: black;
+    background-color: lightblue !important;
+    color: black !important;
 }
 
 .highlight-chosen {
@@ -265,8 +265,13 @@ input[type="text"], input[type="email"] {
     border: 1px solid rgb(16, 4, 36) !important;
 }
 
+@media (width > 375) and (width < 1200) {
 
-@media (width >= 1050px) {
+}
+
+
+
+@media (width >= 1100px) {
     /* move buttons for desktop design and finish resizing elements */
 
 
@@ -279,14 +284,10 @@ input[type="text"], input[type="email"] {
 
     .button-wrapper {
         background-image: url(assets/images/bg-sidebar-desktop.svg);
-        background-size: cover;
-        display: block;
+        background-size: contain;
+        grid-area: steps;
         border-radius: 10px;
         margin: 20px;
-        padding: 20px 0 0 15px;
-        float: left;
-        width: 26%;
-        height: 34em;
     }
 
     .step-number {
@@ -299,6 +300,9 @@ input[type="text"], input[type="email"] {
         color: white;
         width: 35px;
         height: 35px;
+        position: relative;
+        bottom: 140px;
+        right: 35px;
     }
 
     .button-wrapper p {
@@ -307,6 +311,9 @@ input[type="text"], input[type="email"] {
         margin-left: 10px;
         font-family: "Regular";
         color: rgb(185, 182, 182);
+        position: relative;
+        bottom: 150px;
+        right: 40px;
     }
 
     .button-wrapper span {
@@ -318,29 +325,46 @@ input[type="text"], input[type="email"] {
     }
 
     .form-wrapper {
+        display: grid;
+        grid-template-areas:
+            "steps . tab tab"
+            "steps . tab tab"
+            "steps . buttons buttons";
+        grid-template-columns: 325px 1fr 40% 140px;
+        grid-template-rows: 500px 10px 120px;
         margin-top: 80px;
         background-color: white;
         border-radius: 20px;
-        width: 70vw;
+        width: 65vw;
     }
 
     #personal-info input {
-        width: 30em;
+        width: 95%;
         margin-bottom: 20px;
     }
 
     #plan label, #add-ons label {
-        width: 30em;
+        width: 95%;
     }
 
     #multistep-form {
         background-color: transparent;
-        margin-top: 10px;
-        margin-left: 35%;
+        grid-area: tab;
+        margin: 0;
+        padding: 30px;
+        width: 30vw;
+        min-width: 250px;
     }
 
     .footer {
-        display: none;
+        background-color: transparent;
+        position: unset;
+        display: inline;
+        grid-area: buttons;
+    }
+
+    .go-back-btn, .next-step-btn, .confirm {
+        position: unset;
     }
 
     .go-back-btn {
@@ -348,6 +372,9 @@ input[type="text"], input[type="email"] {
         background-color: white;
         color: gray;
         border: none;
+        position: relative;
+        top: 50px;
+        left: 20px;
         border-radius: 5px;
     }
 
@@ -358,5 +385,16 @@ input[type="text"], input[type="email"] {
         border-radius: 5px;
         height: 40px;
         width: 110px;
+        position: absolute;
+        left: 71.5vw;
+        top: 640px;
+    }
+
+    .tab-description {
+        font-size: 1.1vw;
+    }
+
+    .tab-header {
+        font-size: 2.5vw;
     }
 }
