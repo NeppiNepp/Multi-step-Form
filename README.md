@@ -1,2 +1,2 @@
-# Multi-step-Form
-A basic form with a page for each section.
+# Subscription Plan Form
+Basic form setup for a plan subscription service.
