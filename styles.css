@@ -227,7 +227,7 @@ input[type="text"], input[type="email"] {
     width: 100%;
 }
 
-.go-back-btn {
+#go-back-btn {
     font-family: "Medium";
     background-color: white;
     color: gray;
@@ -238,7 +238,7 @@ input[type="text"], input[type="email"] {
     left: 10px;
 }
 
-.next-step-btn, .confirm {
+#next-step-btn, #confirm {
     background-color: darkblue;
     color: white;
     border: none;
@@ -252,7 +252,7 @@ input[type="text"], input[type="email"] {
 
 
 .hidden {
-    display: none !important;
+    display: none;
 }
 
 .highlight-step {
@@ -363,11 +363,11 @@ input[type="text"], input[type="email"] {
         grid-area: buttons;
     }
 
-    .go-back-btn, .next-step-btn, .confirm {
+    #go-back-btn, #next-step-btn, #confirm {
         position: unset;
     }
 
-    .go-back-btn {
+    #go-back-btn {
         font-family: "Medium";
         background-color: white;
         color: gray;
@@ -378,7 +378,7 @@ input[type="text"], input[type="email"] {
         border-radius: 5px;
     }
 
-    .next-step-btn, .confirm {
+    #next-step-btn, #confirm {
         background-color: darkblue;
         color: white;
         border: none;
