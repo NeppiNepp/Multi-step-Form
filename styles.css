@@ -13,17 +13,22 @@
 
 
 
+/* Mobile */
 body {
     background-image: url(assets/images/bg-sidebar-mobile.svg);
     background-repeat: no-repeat;
     background-color: #d9e2e7;
 }
 
+
+/* Display for entire form */
 .form-wrapper {
     font-family: "Regular";
     margin-top: 25px;
 }
 
+
+/* Step buttons */
 .button-wrapper {
     display: flex;
     justify-content: center;
@@ -45,6 +50,8 @@ body {
     display: none;
 }
 
+
+/* Form/Tabs */
 #multistep-form {
     background-color: #ffffff;
     border-radius: 20px;
@@ -72,6 +79,8 @@ section {
     line-height: 1.5;
 }
 
+
+/* Personal Info tab */
 #personal-info label{
     font-size: 13px;
     margin-top: 10px;
@@ -89,6 +98,8 @@ input[type="text"], input[type="email"] {
     padding-left: 15px;
 }
 
+
+/* Plans tab */
 #plan input[type="radio"] {
     display: none;
 }
@@ -113,7 +124,7 @@ input[type="text"], input[type="email"] {
     color: rgb(145, 144, 144);
 }
 
-#plan label, #add-ons label {
+#plan label, #addons label {
     display: block;
     border: 1px solid rgb(214, 214, 214);
     cursor: pointer;
@@ -125,7 +136,9 @@ input[type="text"], input[type="email"] {
     padding: 10px;
 }
 
-#add-ons input {
+
+/* Addons tab */
+#addons input {
     float: left;
     margin-top: 14px;
     cursor: pointer;
@@ -157,8 +170,13 @@ input[type="text"], input[type="email"] {
 }
 
 
-#change, #chosen-addons p, #total {
+/* Summary tab */
+#chosen-addons p, #total {
     color: rgb(156, 156, 156);
+}
+
+#change {
+    color: rgb(136, 32, 136);
 }
 
 .totalling-container {
@@ -205,6 +223,8 @@ input[type="text"], input[type="email"] {
     color: rgb(48, 14, 141);
 }
 
+
+/* Thank You tab */
 #thank-you {
     font-size: 15px;
     margin: 50px 0;
@@ -217,7 +237,7 @@ input[type="text"], input[type="email"] {
 
 
 
-
+/* Bottom buttons */
 .footer {
     position: fixed;
     background-color: white;
@@ -236,6 +256,7 @@ input[type="text"], input[type="email"] {
     position: fixed;
     bottom: 29px;
     left: 10px;
+    cursor: pointer;
 }
 
 #next-step-btn, #confirm {
@@ -248,9 +269,12 @@ input[type="text"], input[type="email"] {
     position: fixed;
     bottom: 17px;
     right: 10px;
+    cursor: pointer;
 }
 
 
+
+/* Special Classes */
 .hidden {
     display: none;
 }
@@ -265,15 +289,17 @@ input[type="text"], input[type="email"] {
     border: 1px solid rgb(16, 4, 36) !important;
 }
 
-@media (width > 375) and (width < 1200) {
 
+/* Tablet */
+@media (width > 375px) and (width < 1100px) {
+    body {
+        background-image: none;
+    }
 }
 
 
-
+/* Desktop */
 @media (width >= 1100px) {
-    /* move buttons for desktop design and finish resizing elements */
-
 
     body {
         background-image: none;
@@ -282,6 +308,8 @@ input[type="text"], input[type="email"] {
         align-items: center;
     }
 
+
+    /* Step Buttons */
     .button-wrapper {
         background-image: url(assets/images/bg-sidebar-desktop.svg);
         background-size: contain;
@@ -324,13 +352,14 @@ input[type="text"], input[type="email"] {
         color: white;
     }
 
+    /* Display for entire form */
     .form-wrapper {
         display: grid;
         grid-template-areas:
             "steps . tab tab"
             "steps . tab tab"
             "steps . buttons buttons";
-        grid-template-columns: 325px 1fr 40% 140px;
+        grid-template-columns: 325px .8fr 40% 140px;
         grid-template-rows: 500px 10px 120px;
         margin-top: 80px;
         background-color: white;
@@ -338,15 +367,8 @@ input[type="text"], input[type="email"] {
         width: 65vw;
     }
 
-    #personal-info input {
-        width: 95%;
-        margin-bottom: 20px;
-    }
 
-    #plan label, #add-ons label {
-        width: 95%;
-    }
-
+    /* Form/Tabs */
     #multistep-form {
         background-color: transparent;
         grid-area: tab;
@@ -356,6 +378,25 @@ input[type="text"], input[type="email"] {
         min-width: 250px;
     }
 
+    .tab-description {
+        font-size: 1.1vw;
+    }
+
+    .tab-header {
+        font-size: 2.5vw;
+    }
+
+    #personal-info input {
+        width: 95%;
+        margin-bottom: 20px;
+    }
+
+    #plan label, #addons label {
+        width: 95%;
+    }
+
+
+    /* Bottom buttons */
     .footer {
         background-color: transparent;
         position: unset;
@@ -388,13 +429,5 @@ input[type="text"], input[type="email"] {
         position: absolute;
         left: 71.5vw;
         top: 640px;
-    }
-
-    .tab-description {
-        font-size: 1.1vw;
-    }
-
-    .tab-header {
-        font-size: 2.5vw;
     }
 }
