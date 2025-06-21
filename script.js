@@ -82,26 +82,26 @@ const validateSection = () => { // validates each section
 
     if (i === 0) { // validate personal info section & retrieve valid data
         if (nameInput.value) {
-            valid = true;
             nameInput.style.border = "1px solid lightgray";
             userData.name = nameInput.value;
         } else {
             nameInput.style.border = "2px solid red";
         }
         if (validEmail.test(emailInput.value)) {
-            valid = true;
             emailInput.style.border = "1px solid lightgray";
             userData.emailAddress = emailInput.value;
         } else {
             emailInput.style.border = "2px solid red";
         }
         if (validPhoneNumber.test(phoneInput.value)) {
-            valid = true;
             phoneInput.style.border = "1px solid lightgray";
             userData.phoneNumber = phoneInput.value;
         } else {
             phoneInput.style.border = "2px solid red";
         }
+
+        if (nameInput.value && validEmail.test(emailInput.value) && validPhoneNumber.test(phoneInput.value))
+            valid = true;
     }
 
 
